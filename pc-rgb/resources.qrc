@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/tray">
+        <file>RGB_color_wheel_24.svg</file>
+    </qresource>
+</RCC>

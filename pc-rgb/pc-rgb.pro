@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui multimedia serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,10 +25,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    serialhandler.cpp \
+    audiorecorder.cpp \
+    trayicon.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    serialhandler.h \
+    audiorecorder.h \
+    trayicon.h
 
 FORMS += \
         mainwindow.ui
+
+RESOURCES += \
+    resources.qrc
