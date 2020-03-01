@@ -1,0 +1,15 @@
+stages:
+- build
+
+build_linux:
+  stage: build
+  image: ubuntu:latest
+  before_script:
+    - apt-get update
+    - apt-get install -y build-essential qtmultimedia5-dev libqt5serialport5-dev qt5-default qt5-qmake
+  script:
+    - qmake pc-rgb.pro -Wall
+    - make
+  artifacts:
+    paths:
+      - pc-rgb
